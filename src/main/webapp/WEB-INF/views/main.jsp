@@ -123,7 +123,7 @@
 			<hr>
 
 			<div class="d-flex justify-content-end">
-				<button class="btn btn-primary m-3" data-toggle="modal" data-target="#write"><i class="fas fa-pencil-alt fa-2x"></i></button>
+				<button class="btn btn-info m-3" data-toggle="modal" data-target="#write"><i class="fas fa-pencil-alt fa-2x"></i></button>
 			</div>
 
 		</div>
@@ -171,7 +171,7 @@
 				<div class="modal-body text-center">
 					<p>2020.3.23</p> 
 					<p>Copyright &copy; 2020 by Jewon513@gmail.com<p>
-					<a href="https://github.com/jewon513"><i class="fab fa-github-square fa-4x"></i></a>
+					<a href="https://github.com/jewon513/bucketList-project"><i class="fab fa-github-square fa-4x"></i></a>
 				</div>
 
 				<div class="modal-footer">
