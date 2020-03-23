@@ -1,0 +1,22 @@
+.sub-container {
+	width: 768px;
+}
+
+.row:hover {
+	cursor: pointer;
+	background: #ddd;
+}
+
+.complete {
+	text-decoration: line-through;
+}
+
+.project-title:hover{
+	cursor: pointer;
+}
+
+@media ( min-width : 360px) {
+	.sub-container {
+		max-width: 100%
+	}
+}

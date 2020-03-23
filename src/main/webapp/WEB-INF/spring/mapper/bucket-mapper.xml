@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.biz.bucket.persistence.BucketDao">
+ 
+ 
+ 	<select id="findById" resultType="bucketVO">
+ 	
+ 		SELECT * FROM tbl_bucket WHERE b_id = #{b_id}
+ 	
+ 	</select>
+ 
+ 	<select id="selectAll" resultType="bucketVO">
+ 		
+ 		SELECT * FROM tbl_bucket order by b_reg_date
+ 	
+ 	</select>
+
+ 	<insert id="insert">
+ 	
+ 		INSERT INTO tbl_bucket(
+ 			B_ID,
+			B_SUBJECT,
+			B_TEXT 		
+ 		)VALUES(
+ 			seq_bucket.nextval,
+			#{b_subject},
+			#{b_text}
+ 		)
+ 	
+ 	</insert>
+ 	
+ 	<delete id="delete">
+ 		DELETE FROM tbl_bucket
+ 		WHERE b_id = #{b_id}
+ 	</delete>
+ 	
+ 	 <update id="update" parameterType="bucketVO">
+ 		UPDATE tbl_bucket
+ 		SET
+ 			b_subject = #{b_subject},
+ 			b_text = #{b_text},
+ 			b_update_date = sysdate
+ 		WHERE 
+ 			b_id = #{b_id}
+ 	</update>
+ 	
+ 	
+ 	<update id="completeUpdate" parameterType="bucketVO">
+ 		UPDATE tbl_bucket
+ 		SET
+ 			b_complete = #{b_complete}
+ 		WHERE 
+ 			b_id = #{b_id}
+ 	</update>
+
+ </mapper> 
